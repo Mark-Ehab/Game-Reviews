@@ -88,7 +88,7 @@ export class Ui {
               <ul class="game-details-meta-data list-unstyled m-0">
                 <li>
                   Category:
-                  <span class="badge text-black text-uppercase"> ${genre}</span>
+                  <span class="badge text-black "> ${genre}</span>
                 </li>
                 <li>
                   Platform:
