@@ -1,0 +1,198 @@
+/*------------------------------------------------------ 
+# Custom Styles File for Home Page of Login System App #
+-------------------------------------------------------*/
+
+/*---------------------------------------- 
+# Definition of Custom Variables in root
+# Pseudo Class 
+------------------------------------------*/
+:root {
+  --body-text-color: white;
+  --body-bg-color: rgb(39, 43, 48);
+  --navbar-bg-color: rgb(58, 73, 123);
+  --navbar-navlinks-bg-color: rgb(58, 73, 123);
+  --navbar-toggler-color: black;
+  --nav-link-active-color: RGB(0, 153, 204);
+  --nav-link-hover-color: RGB(0, 153, 204);
+  --card-footer-badges-bg-color: rgb(50, 56, 62);
+  --body-font-family: "Comic Sans MS";
+  --h1-font-size: 1.25rem;
+  --h2-font-size: 0.875rem;
+  --nav-links-font-size: 0.7656rem;
+  --card-header-badge-font-size: 0.75rem;
+  --card-footer-badges-font-size: 0.6563rem;
+  --h1-font-weight: 500;
+  --body-font-size: 0.875rem;
+  --game-details-page-h1-font-size: 1.6315rem;
+  --game-details-page-h2-font-size: 1.686rem;
+  --game-details-page-badges-color: rgb(13, 202, 240);
+  --game-details-page-btn-color: white;
+  --game-details-page-btn-hover-border-color: rgb(255, 193, 7);
+  --game-details-page-btn-border-color: rgb(255, 193, 7);
+  --game-details-page-btn-hover-bg: rgb(255, 193, 7);
+  --game-details-page-btn-active-bg: rgb(255, 193, 7);
+  --game-details-page-btn-active-border-color: rgb(255, 193, 7);
+}
+/*----------------------------------------- 
+# General Styles 
+------------------------------------------*/
+body {
+  color: var(--body-text-color);
+  background-color: var(--body-bg-color);
+  font-size: var(--body-font-size);
+  font-family: var(--body-font-family);
+}
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
+}
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+}
+.loader {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*----------------------------------------- 
+# Hero Section Styles  
+------------------------------------------*/
+#hero {
+  background-image: url(./../assets/wraper.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  height: 30vh;
+}
+/*----------------------------------------- 
+# Nav Bar Section Styles  
+------------------------------------------*/
+#navbar {
+  background-color: var(--navbar-bg-color);
+  margin-top: -1.875rem;
+  box-shadow: 0 0 0.625rem 0.0625rem rgb(0 0 0 / 0.7);
+}
+#navbar .navbar-toggler {
+  color: black;
+}
+#navbar .navbar-toggler span {
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: var(--bs-navbar-toggler-icon-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+#navbar.navbar-custom {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-color: var(--body-text-color);
+  --bs-navbar-hover-color: var(--main-color);
+  --bs-navbar-active-color: var(--main-color);
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-padding-x: 0.5rem;
+  --bs-navbar-brand-color: 0;
+  --bs-navbar-brand-hover-color: 0;
+}
+#navbar .container > a figure img {
+  width: 2.5rem;
+  height: 2.3392rem;
+  min-width: 2.5rem;
+  min-height: 2.3392rem;
+}
+#navbar .navbar-collapse {
+  background-color: var(--navbar-navlinks-bg-color);
+}
+#navbar .navbar-nav .nav-item .nav-link {
+  --bs-nav-link-font-size: var(--nav-links-font-size);
+}
+#navbar .navbar-nav .nav-item .nav-link:hover {
+  --bs-nav-link-hover-color: var(--nav-link-hover-color);
+}
+#navbar .navbar-nav .nav-item .nav-link.active {
+  --bs-navbar-active-color: var(--nav-link-active-color);
+}
+
+/*----------------------------------------- 
+# Games Gallery Section Styles  
+------------------------------------------*/
+#games-gallery .row {
+  margin-top: -1.5rem;
+}
+#games-gallery .card {
+  --bs-body-color: 0;
+  filter: grayscale(0.7);
+  transition: 0.5s filter, 0.5s transform;
+  cursor: pointer;
+}
+#games-gallery .card .card-upper .card-body .card-title .badge {
+  height: 1.75rem;
+  width: 2.6543rem;
+  min-width: 2.6543rem;
+}
+#games-gallery .card:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+#games-gallery .card .card-footer span {
+  background-color: var(--card-footer-badges-bg-color);
+}
+/*----------------------------------------- 
+# Game Details Section Styles  
+------------------------------------------*/
+#game-details-page .game-details-header h1 {
+  font-size: var(--game-details-page-h1-font-size);
+}
+#game-details-page .game-details-header .btn-close {
+  width: 1rem;
+  height: 1rem;
+}
+#game-details-page .game-details-content h2 {
+  font-size: var(--game-details-page-h2-font-size);
+}
+#game-details-page .game-details-content .game-details-meta-data li {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+#game-details-page .game-details-content .game-details-meta-data .badge {
+  font-size: 0.75rem;
+  background-color: var(--game-details-page-badges-color);
+}
+#game-details-page .game-details-content .show-game-btn {
+  --bs-btn-color: var(--game-details-page-btn-color);
+  --bs-btn-hover-border-color: var(--game-details-page-btn-hover-border-color);
+  --bs-btn-border-color: var(--game-details-page-btn-border-color);
+  --bs-btn-hover-bg: var(--game-details-page-btn-hover-bg);
+  --bs-btn-active-bg: var(--game-details-page-btn-active-bg);
+  --bs-btn-active-border-color: var(
+    --game-details-page-btn-active-border-color
+  );
+}

@@ -1,0 +1,259 @@
+/*--------------------------------------------------------- 
+# Custom Styles File for Contact Page of Login System App #
+----------------------------------------------------------*/
+/*---------------------------------------- 
+# Definition of Custom Variables in root
+# Pseudo Class 
+------------------------------------------*/
+:root {
+  --bg-color: rgb(30, 32, 43);
+  --main-color: rgb(0, 154, 216);
+  --main-font-family: Helvetica, sans-serif;
+  --body-text-color: RGB(191, 193, 200);
+  --body-text-size: 0.875rem;
+  --body-font-weight: 400;
+  --navbar-navlink-list-bg-color: rgb(38, 41, 54);
+  --navbar-navlink-border-bottom-color: rgba(255, 255, 255, 0.1);
+  --navbar-navlink-focus-color-lg: white;
+  --navbar-navlink-focus-outline-color-lg: white;
+  --navbar-navlink-hover-color: white;
+  --path-tracking-bar-bg-color: rgb(38, 41, 54);
+  --btn-submit-text-color: white;
+  --h1-font-size: 1rem;
+  --h1-font-weight: 700;
+  --h1-color: white;
+  --text-selection-color: white;
+  --footer-bg-color: rgb(38, 41, 54);
+}
+/*----------------------------------------- 
+# General Styles 
+------------------------------------------*/
+body {
+  color: var(--body-text-color);
+  background-color: var(--bg-color);
+  font-size: var(--body-text-size);
+  font-family: var(--main-font-family);
+}
+body::selection {
+  background-color: var(--main-color);
+  color: var(--text-selection-color);
+}
+h1 {
+  color: var(--h1-color);
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
+  margin-bottom: 0.3125rem;
+}
+.form-control {
+  --bs-body-color: var(--login-form-input-fields-color);
+  --bs-body-bg: var(--login-form-input-fields-bg-color);
+  --bs-border-radius: 0.25rem;
+}
+.form-control:focus {
+  --bs-border-color: var(--main-color);
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+.gy-custom {
+  --bs-gutter-y: 0.625rem;
+}
+/*----------------------------------------- 
+# Nav Bar Section Styles  
+------------------------------------------*/
+#navbar.navbar-custom {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 3.125rem;
+  --bs-navbar-color: var(--body-text-color);
+  --bs-navbar-active-color: var(--main-color);
+  --bs-navbar-hover-color: var(--navbar-navlink-hover-color);
+  --bs-nav-link-padding-y: 0;
+  --bs-nav-link-padding-x: 0;
+  --bs-navbar-nav-link-padding-x: 1.25rem;
+}
+#navbar.navbar-custom a > figure img {
+  width: 4rem;
+  height: 2.375rem;
+  margin-right: 0.625rem;
+}
+#navbar.navbar-custom a > figure + div {
+  width: 4.7956rem;
+  height: 2.4167rem;
+}
+#navbar.navbar-custom a > figure + div span {
+  font-size: 0.625rem;
+  color: RGB(191, 193, 200);
+}
+#navbar.navbar-custom .navbar-toggler {
+  --bs-navbar-toggler-padding-x: 1.25rem;
+  --bs-navbar-toggler-padding-y: 1.25rem;
+  --bs-navbar-toggler-border-radius: 2.5rem;
+  --bs-border-width: 0.125rem;
+  --bs-navbar-toggler-border-color: transparent;
+  --bs-navbar-toggler-focus-width: transparent;
+  transition: 0.5s border-color;
+  width: 3.5rem;
+  height: 3.75rem;
+}
+#navbar.navbar-custom .navbar-toggler span {
+  transition: 0.2s color;
+}
+#navbar.navbar-custom .navbar-toggler:hover {
+  --bs-navbar-toggler-border-color: var(--main-color);
+}
+#navbar.navbar-custom .navbar-toggler:hover > span {
+  color: var(--main-color);
+}
+#navbar.navbar-custom .navbar-nav {
+  background-color: var(--navbar-navlink-list-bg-color);
+  margin-top: 1.875rem;
+}
+#navbar.navbar-custom .navbar-nav .nav-item:not(:last-child) {
+  border-bottom: solid var(--navbar-navlink-border-bottom-color) 0.0417rem;
+}
+#navbar.navbar-custom .navbar-nav .nav-item .nav-link {
+  --bs-nav-link-padding-y: 1.25rem;
+}
+/*----------------------------------------- 
+# Path Tracking Bar Section Styles  
+------------------------------------------*/
+#path-tracking-bar > .container > div {
+  background-color: rgb(38, 41, 54);
+  padding-block: 1.25rem;
+  padding-inline: 1.875rem;
+  height: 3.7188rem;
+}
+#path-tracking-bar > .container > div > a {
+  color: rgb(191, 193, 200);
+  font-size: 13px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 0.5s text-decoration;
+}
+#path-tracking-bar > .container > div > a:hover {
+  text-decoration: underline;
+}
+#path-tracking-bar > .container > div > a span {
+  margin-inline: 0.625rem;
+  color: rgba(191, 193, 200, 0.2);
+}
+#path-tracking-bar > .container > div > a + span {
+  font-size: 0.8125rem;
+  font-weight: 300;
+}
+/*----------------------------------------- 
+# Contact Form Section Styles  
+------------------------------------------*/
+#contact-form {
+  padding-block: 4.375rem;
+}
+#contact-form .contact-form-left {
+  background-color: rgb(38, 41, 54);
+}
+#contact-form .contact-form-left iframe {
+  max-height: 13.75rem;
+  height: 13.75rem;
+}
+#contact-form .contact-form-left article {
+  padding: 1.25rem;
+}
+#contact-form .contact-form-left article ul li:first-child img {
+  width: 1.875rem;
+  height: 1.1875rem;
+  padding-right: 1.125rem;
+}
+#contact-form .contact-form-left article ul li:last-child {
+  column-gap: 1.25rem;
+}
+#contact-form .contact-form-left article ul li:last-child div:first-child img {
+  width: 1.8125rem;
+  height: 1.1875rem;
+  padding-right: 0.625rem;
+}
+#contact-form .contact-form-left article ul li:last-child div:last-child img {
+  width: 1.625rem;
+  height: 0.75rem;
+  padding-right: 0.625rem;
+}
+#contact-form .contact-form-left article ul li:last-child a {
+  color: white;
+}
+#contact-form .contact-form-right input {
+  padding: 0.9375rem;
+  border: solid 0.125rem rgb(57, 60, 72);
+  outline: none;
+  transition: 0.5s border-color;
+}
+#contact-form .contact-form-right input:focus,
+#contact-form .contact-form-right input:hover {
+  border-color: var(--main-color);
+}
+#contact-form .contact-form-right textarea {
+  padding: 0.9375rem;
+  border: solid 0.125rem rgb(57, 60, 72);
+  min-height: 9.375rem;
+  outline: none;
+  transition: 0.5s border-color;
+}
+#contact-form .contact-form-right textarea:focus,
+#contact-form .contact-form-right textarea:hover {
+  border-color: var(--main-color);
+}
+#contact-form .contact-form-right .btn-submit {
+  --bs-btn-color: var(--btn-submit-text-color);
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-hover-bg: var(--main-color);
+  --bs-btn-font-size: var(--body-text-color);
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.625rem;
+  --bs-btn-border-width: 0;
+  --bs-btn-active-bg: var(--main-color);
+  max-height: 2.875rem;
+  height: 2.875rem;
+}
+/*----------------------------------------- 
+# Footer Section Styles  
+------------------------------------------*/
+#footer {
+  padding-block: 3.125rem;
+  background-color: var(--footer-bg-color);
+}
+#footer input {
+  padding-inline: 1.25rem 6.25rem;
+  padding-block: 1.25rem;
+  height: 3.5rem;
+  max-height: 3.5rem;
+  background-color: var(--bg-color);
+}
+#footer .btn-subscribe {
+  --bs-btn-color: var(--btn-submit-text-color);
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-hover-bg: var(--main-color);
+  --bs-btn-font-size: var(--body-text-size);
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.625rem;
+  --bs-btn-border-width: 0;
+  --bs-btn-active-bg: var(--main-color);
+  max-height: 2.875rem;
+  height: 2.875rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.3125rem;
+}
+#footer a {
+  color: var(--main-color);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  transition: 0.5s all;
+}
+#footer a:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+#footer i {
+  font-size: 1.25rem;
+}
