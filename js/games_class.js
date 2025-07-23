@@ -58,7 +58,6 @@ export class Games {
       );
       const data = await response.json();
       this.ui.hideSection(this.loader);
-      console.log(data);
       if (!response.ok) {
         throw new Error(
           data?.status_message || data?.message || "Undefined Error Occured."

@@ -43,7 +43,6 @@ export class GameDetails {
         requestInit
       );
       const data = await response.json();
-      console.log(data);
       if (!response.ok) {
         throw new Error(
           data?.status_message || data?.message || "Undefined Error Occured."
