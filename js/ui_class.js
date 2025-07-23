@@ -102,7 +102,7 @@ export class Ui {
               <p>
              ${description}
               </p>
-              <a target="blank" href="${game_url}" class="btn show-game-btn text-capitalize"
+              <a target="blank" href="${game_url}" class="btn show-game-btn text-capitalize mb-4"
                 >show game</a
               >
             </article>
